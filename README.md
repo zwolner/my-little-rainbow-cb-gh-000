@@ -15,15 +15,17 @@ Hyper Text Markup Language, or HTML, is a way to demarcate a document into diffe
   - Most have an opening tag such as `<div>` and a closing tag `</div>`
     - The `/` indicates to the browser that that tag is a closing tag
     - The element is everything between the tags and the tags themselves
-    - Closing tags are very important! Here's a [website]() that has no closing tags. Don't do that!
-  - Some tags are self closing like the line break element `<br/>`, which has the `/` to signify that it is self closing.
+  - Some tags are self closing like the line break element `<br>`.
   - Elements can have IDs and classes to aid the browser in finding specific tags.
     - Must begin with a letter A-Z or a-z
     - Can be followed by: letters (A-Za-z), digits (0-9), hyphens ("-"), and underscores ("_")
     - IDs __can__ only be used once per page. ex: `<div id="this-special-div"></div>`
     - Classes can be used as many times as you want. ex: `<div classes="a-less-special-div"></div>`
   - Elements nested inside other elements are called children
+    - Children inherit attributes fromt their parents.
+    - Dont' nest everything. Here's a [website](http://sewingandembroiderywarehouse.com/embtrb.htm) that nested everything. Don't do that!
   - Elements next to one another are siblings
+    - Siblings do not inherit from one another, but are important for selecting in CSS
 
 Here's and example of element relations:
 ```html
@@ -48,7 +50,7 @@ Cascading Style Sheets, or CSS, is language created to style an HTML document by
 Here's an example of CSS styling:
 ```css
   * {
-    color: red;  /* color in CSS refers to font color */
+    border-top-color: red;  /* color in CSS refers to font color */
   }  /* all elements will have red font */
 ```
 
@@ -92,7 +94,7 @@ Red: `#f00`; Orange: `#ffa500`; Yellow: `#ff0`; Green: `#00bc3f`; Blue: `#06f`; 
 
 With those colors all we have to do next is select each div individually.  That is a perfect use for ids since they're meant to style one specific element only.  So that means we'll need to add an id for each div, so a logical name for each div would be the color that they have to be.  It could be something random, but good names make for semantic code. So lets give the outer most div the id red. We'll do this like so.
 ```html
-  <div id='red'>
+  <div id="red">
     ...
   </div>
 ```
@@ -100,7 +102,7 @@ With those colors all we have to do next is select each div individually.  That 
 And to give that id some CSS attributes we'll go into `main.css`, select the id, and mark its color as red like this.
 ```css
   #red { /* this selects any elements with the red id */
-    color: #f00;
+    border-top-color: #f00;
   }
 ```
 
