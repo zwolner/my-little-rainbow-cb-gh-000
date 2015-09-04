@@ -1,7 +1,3 @@
----
-tags: html elements, css styling, css selectors, importing stylesheets, inheritance, kids
-languages: html, css
----
 #My Little Rainbow
 In this tutorial we're going to make a rainbow with HTML `<div>` elements. And while we do it we're going to learn about html elements, css styling, css selectors, how color works in css, and importing stylesheets.  That might sound like a lot but it isn't.
 
@@ -23,7 +19,7 @@ Hyper Text Markup Language, or HTML, is a way to demarcate a document into diffe
     - Classes can be used as many times as you want. ex: `<div classes="a-less-special-div"></div>`
   - Elements nested inside other elements are called children
     - Children inherit attributes fromt their parents.
-    - Dont' nest everything. Here's a [website](http://sewingandembroiderywarehouse.com/embtrb.htm) that nested everything. Don't do that!
+    - Don't nest everything. Here's a [website](http://sewingandembroiderywarehouse.com/embtrb.htm) that nested everything. Don't do that!
   - Elements next to one another are siblings
     - Siblings do not inherit from one another, but are important for selecting in CSS
 
@@ -55,12 +51,12 @@ Here's an example of CSS styling:
 ```
 
 ##Making a Rainbow
-First off make sure you have [forked](https://github.com/learn-co-curriculum/my-little-rainbow/fork) and cloned this repo. Next, create a new branch, and switch to it; it's `git checkout -b your_solution_branch_name` in case you forgot.
+First off make sure you have [forked](https://github.com/learn-co-students/my-little-rainbow-summer-2015-teachers) and cloned this repo. Next, create a new branch, and switch to it; it's `git checkout -b your_solution_branch_name` in case you forgot.
 
-In that dir you'll see three files. `index.html`, `main.css`, and this `README.md`.  Open them in sublime via `subl .` in your command line.  Also open `index.html` in your browser; if everything is working correctly you should see a white page. Good job!
+In that dir you'll see three files. `index.html`, `main.css`, and this `README.md`.  Open them in your text editor via your command line.  Also open `index.html` in your browser; if everything is working correctly you should see a white page. Good job!
 
 ###Making the Divs Visible
-If you use the inspector or look at the file in Sublime, you'll that the basic file stucture is there.  So why can't we see anything?!?1?  That's because the divs have no styling on them right now.  And that's because we never told the browser to inlcude a CSS file that would apply any styles. 
+If you use the inspector or look at the file in your text editor, you'll that the basic file stucture is there.  So why can't we see anything?!?1?  That's because the divs have no styling on them right now.  And that's because we never told the browser to inlcude a CSS file that would apply any styles. 
 
 Let's fix this by adding the stylesheet to the `head` like so,
 ```html
