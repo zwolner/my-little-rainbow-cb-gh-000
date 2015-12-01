@@ -18,7 +18,7 @@ Hyper Text Markup Language, or HTML, is a way to demarcate a document into diffe
     - IDs __can__ only be used once per page. ex: `<div id="this-special-div"></div>`
     - Classes can be used as many times as you want. ex: `<div classes="a-less-special-div"></div>`
   - Elements nested inside other elements are called children
-    - Children inherit attributes fromt their parents.
+    - Children inherit attributes from their parents.
     - Don't nest everything. Here's a [website](http://sewingandembroiderywarehouse.com/embtrb.htm) that nested everything. Don't do that!
   - Elements next to one another are siblings
     - Siblings do not inherit from one another, but are important for selecting in CSS
@@ -51,12 +51,12 @@ Here's an example of CSS styling:
 ```
 
 ##Making a Rainbow
-First off make sure you have [forked](https://github.com/learn-co-students/my-little-rainbow-summer-2015-teachers) and cloned this repo. Next, create a new branch, and switch to it; it's `git checkout -b your_solution_branch_name` in case you forgot.
+First off make sure you have [forked](https://github.com/learn-co-students/my-little-rainbow-v-000) and cloned this repo. Next, create a new branch, and switch to it; it's `git checkout -b your_solution_branch_name` in case you forgot.
 
 In that dir you'll see three files. `index.html`, `main.css`, and this `README.md`.  Open them in your text editor via your command line.  Also open `index.html` in your browser; if everything is working correctly you should see a white page. Good job!
 
 ###Making the Divs Visible
-If you use the inspector or look at the file in your text editor, you'll that the basic file stucture is there.  So why can't we see anything?!?1?  That's because the divs have no styling on them right now.  And that's because we never told the browser to inlcude a CSS file that would apply any styles. 
+If you use the inspector or look at the file in your text editor, you'll that the basic file stucture is there.  So why can't we see anything?!?1?  That's because the divs have no styling on them right now.  And that's because we never told the browser to include a CSS file that would apply any styles. 
 
 Let's fix this by adding the stylesheet to the `head` like so,
 ```html
@@ -70,22 +70,22 @@ Link is a self closing tag that will creates a relative path with the `href` att
 
 Now if you refresh the `index.html` page in your browser you should see an ugly black rainbow.  [Gerd Jerb!](http://cdn.memegenerator.net/instances/500x/23902661.jpg)
 
-Okay so we got the basic outline because the in `main.css` all the `div` elements were selected and styled, but the colors are wrong because the default border color is black.  To fix this we need to learn a little bit more about colors, because while we could just set `color: red;` we should learn how to make colors without words.  We should just use numbers, and just any set of numbers but numbers with base pair of 16 rather than base pair of 10 like use every day.  These numbers are called hexadecimals and we can use them to make colors.
+Okay so we got the basic outline because the in `main.css` all the `div` elements were selected and styled, but the colors are wrong because the default border color is black.  To fix this we need to learn a little bit more about colors, because while we could just set `color: red;` we should learn how to make colors without words.  We should just use numbers, and not just any set of numbers, but numbers with base pair of 16 rather than base pair of 10 like use every day.  These numbers are called hexadecimals and we can use them to make colors.
 
 ####Some stuff you should know about hex colors (and web colors in general).
-Hex colors begin with `#` and are followed by, generally, 6 numbers, but some of these numbers are actually letters.  The lowest single digit number in hex is 0 and the highest single digit number is f.  This table might help to visual what I mean by this.
+Hex colors begin with `#` and are followed by, generally, 6 numbers, but some of these numbers are actually letters.  The lowest single digit number in hex is 0 and the highest single digit number is f.  This table might help to visualize what I mean by this.
 
 ```
   Decimal Numbers:      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
   Hexadecimal Numbers:  0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a,  b,  c,  d,  e,  f,  10
 ```
 
-Hex colors work by creating Red, Green, Blue (RGB) values.  Traditional RGB colors are on a scale of 0 to 255 for each three colors in the spectrum.  Hex colors are considered true colors since it can represent ~16 million colors, but don't worry your eye can only see 10 million of those.  So `#000000` translates to black since it 0 reds, 0 green, 0 blues represents the absence of all colors, and `#ffffff` makes white since 255 reds, 255 greens, and 255 blues is the most every color equally.  
+Hex colors work by creating Red, Green, Blue (RGB) values.  Traditional RGB colors are on a scale of 0 to 255 for each three colors in the spectrum.  Hex colors are considered true colors since it can represent ~16 million colors, but don't worry your eye can only see 10 million of those.  So `#000000` translates to black since 0 reds, 0 green, 0 blues represents the absence of all colors, and `#ffffff` makes white since 255 reds, 255 greens, and 255 blues is the maximum of each of the colors.  
 
 Hex colors can be shortened to just three numbers since each RGB value is the same for each digit. So `#11dd99` can be written as `#1d9`.
 
 ####Coloring the Rainbow
-To get roygbiv onto our rainbow we'll need need seven hex colors.
+To get roygbiv onto our rainbow we'll need seven hex colors.
 Red: `#f00`; Orange: `#ffa500`; Yellow: `#ff0`; Green: `#00bc3f`; Blue: `#06f`; Indigo: `#8a2be2`; Violet: `#d300c9`
 
 With those colors all we have to do next is select each div individually.  That is a perfect use for ids since they're meant to style one specific element only.  So that means we'll need to add an id for each div, so a logical name for each div would be the color that they have to be.  It could be something random, but good names make for semantic code. So lets give the outer most div the id red. We'll do this like so.
@@ -102,4 +102,4 @@ And to give that id some CSS attributes we'll go into `main.css`, select the id,
   }
 ```
 
-If you refresh the page now all the divs will be red.  That's because even though we only selected one div all of that divs children will inherit the styles of the parent.  This is what is known as inheritance, and because the children divs have no color specific to themselves they default to the color of their parent.  So to make sure the rainbow isn't so monochromatic you now need to repeat the above steps with the final six colors of the rainbow, and when you do you should have something like [this](http://i0.kym-cdn.com/photos/images/original/000/118/087/2468904593_6a7c692ab6.jpg).
+So to make sure the rainbow isn't so monochromatic you now need to repeat the above steps with the final six colors of the rainbow, and when you do you should have something like [this](http://i0.kym-cdn.com/photos/images/original/000/118/087/2468904593_6a7c692ab6.jpg).
