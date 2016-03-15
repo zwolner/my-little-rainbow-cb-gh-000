@@ -1,3 +1,6 @@
+languages:
+  - html
+  - css
 tags:
   - html elements
   - css styling
@@ -5,6 +8,5 @@ tags:
   - importing stylesheets
   - inheritance
   - kids
-languages:
-  - html
-  - css
+tests:
+ - green_onion
